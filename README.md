@@ -66,6 +66,7 @@ fn main() {
 - A thread secundária envia a string "hi" através do canal.
 - A thread principal recebe e imprime a mensagem.
 
+**[Fonte:doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-02-message-passing.html)**
 ### 3. Compartilhamento de Dados com Arc e Mutex (`arc_mutex.rs`)
 
 Este exemplo demonstra como usar `Arc` e `Mutex` para compartilhar dados entre múltiplas threads de forma segura.
