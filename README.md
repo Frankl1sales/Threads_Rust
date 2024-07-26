@@ -133,5 +133,3 @@ Sinta-se à vontade para enviar pull requests ou abrir issues para sugestões e 
 ## Licença
 
 Este projeto é licenciado sob a [MIT License](LICENSE).
-
-```
