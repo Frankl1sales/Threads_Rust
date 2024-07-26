@@ -131,5 +131,3 @@
 ### Ferramentas Recomendadas
 - **Gravação de Tela:** OBS Studio, Screencast-O-Matic.
 - **Edição de Vídeo:** DaVinci Resolve, Shotcut.
-
-Se precisar de mais alguma coisa, estarei por aqui para ajudar!
