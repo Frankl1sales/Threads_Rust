@@ -6,20 +6,6 @@ Claro! Vou criar um exemplo de `README.md` que explica o projeto e fornece detal
 # Exemplo de Programação Multithread em Rust
 
 Este repositório contém exemplos de programação multithread em Rust, demonstrando como utilizar threads para realizar tarefas concorrentes e gerenciar dados compartilhados entre elas.
-
-## Estrutura do Projeto
-
-O projeto está estruturado da seguinte forma:
-
-```
-multithread_examples/
-├── Cargo.toml
-├── src/
-│   └── main.rs
-└── examples/
-    ├── create_threads.rs
-    ├── channels.rs
-    └── arc_mutex.rs
 ```
 
 - **Cargo.toml**: Arquivo de configuração do projeto Cargo.
