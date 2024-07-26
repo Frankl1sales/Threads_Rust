@@ -1,10 +1,7 @@
-### Exemplo de `README.md`
-
-```markdown
 # Exemplo de Programação Multithread em Rust
 
 Este repositório contém exemplos de programação multithread em Rust, demonstrando como utilizar threads para realizar tarefas concorrentes e gerenciar dados compartilhados entre elas.
-```
+
 
 - **Cargo.toml**: Arquivo de configuração do projeto Cargo.
 - **src/main.rs**: O arquivo principal do projeto (não utilizado neste exemplo específico).
