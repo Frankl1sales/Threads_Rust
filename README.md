@@ -35,6 +35,8 @@ fn main() {
 **Descrição:**
 - Cria uma thread que imprime mensagens de "Hello" com números.
 - A thread principal também imprime mensagens.
+- Thread Principal: A thread que executa o código na função main(). É a thread de início do programa.
+- Thread Secundária: A thread criada com thread::spawn para executar uma tarefa paralela.
 - Usa `handle.join()` para esperar que a thread secundária termine.
 
 ### 2. Comunicação entre Threads usando Canais (`channels.rs`)
