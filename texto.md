@@ -1,5 +1,3 @@
-Claro! Vou te ajudar a organizar o conteúdo e criar um roteiro para o vídeo sobre Rust e seus recursos para programação multithread. Seguindo este roteiro, você poderá garantir que todas as informações importantes sejam abordadas dentro do tempo de 10 minutos.
-
 ### Estrutura do Vídeo
 
 1. **Introdução (1 min)**
