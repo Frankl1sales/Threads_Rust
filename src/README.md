@@ -1,5 +1,3 @@
-
-```markdown
 # Comparação de Programação Multithread: Java vs Rust
 
 Este repositório contém exemplos de programação multithread em Java e Rust, ilustrando como ambas as linguagens lidam com a sincronização de threads e gerenciamento de memória.
@@ -14,7 +12,7 @@ A programação multithread pode ser complexa e propensa a erros em muitas lingu
 
 Em Java, utilizamos `ExecutorService` para gerenciar threads e `Runnable` para definir as tarefas. Java conta com um garbage collector para gerenciar automaticamente a memória.
 
-```java
+```
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
