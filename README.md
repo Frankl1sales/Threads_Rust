@@ -39,6 +39,8 @@ fn main() {
 - Thread Secundária: A thread criada com thread::spawn para executar uma tarefa paralela.
 - Usa `handle.join()` para esperar que a thread secundária termine.
 
+**Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-01-threads.html)
+
 ### 2. Comunicação entre Threads usando Canais (`channels.rs`)
 
 Este exemplo mostra como usar canais para comunicar dados entre threads.
@@ -66,7 +68,7 @@ fn main() {
 - A thread secundária envia a string "hi" através do canal.
 - A thread principal recebe e imprime a mensagem.
 
-**Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-02-message-passing.html)**
+**Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-02-message-passing.html)
 
 ### 3. Compartilhamento de Dados com Arc e Mutex (`arc_mutex.rs`)
 
@@ -103,6 +105,8 @@ fn main() {
 - 10 threads incrementam o contador.
 - Usa `Arc` para compartilhar o `Mutex` entre as threads.
 - Usa `Mutex` para garantir acesso exclusivo ao contador.
+
+**Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-03-shared-state.html)
 
 ## Como Executar os Exemplos
 
