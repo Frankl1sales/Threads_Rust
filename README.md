@@ -1,5 +1,3 @@
-Claro! Vou criar um exemplo de `README.md` que explica o projeto e fornece detalhes sobre os exemplos de multithreading em Rust. O arquivo incluirá uma introdução ao projeto, uma descrição dos exemplos, e instruções sobre como executar os exemplos.
-
 ### Exemplo de `README.md`
 
 ```markdown
