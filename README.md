@@ -106,6 +106,7 @@ fn main() {
 - Cria uma thread que imprime mensagens de "Hello" com números.
 - A thread principal também imprime mensagens.
 - Usa `handle.join()` para esperar que a thread secundária termine.
+  
 **Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-01-threads.html)
   
 ### 2. Comunicação entre Threads usando Canais (`channels.rs`)
