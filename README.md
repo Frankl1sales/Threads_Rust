@@ -16,12 +16,12 @@ multithread_examples/
     └── arc_mutex.rs
     └── MultithreadExample.java
     └── rust_multithread_example.rs
-
+```
 
 - **Cargo.toml**: Arquivo de configuração do projeto Cargo.
 - **src/main.rs**: O arquivo principal do projeto (não utilizado neste exemplo específico).
 - **examples/**: Diretório contendo os exemplos de código para multithreading.
-```
+
 
 
 # Comparação de Programação Multithread: Java vs Rust
