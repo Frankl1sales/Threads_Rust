@@ -1,143 +1,71 @@
-# Exemplo de Programação Multithread em Rust
+```markdown
+# Comparação de Programação Multithread: Java vs Rust
 
-Este repositório contém exemplos de programação multithread em Rust, demonstrando como utilizar threads para realizar tarefas concorrentes e gerenciar dados compartilhados entre elas.
+Este repositório contém exemplos práticos de programação multithread em Java e Rust, com foco em comparar o desempenho e as abordagens de gerenciamento de threads e memória em ambas as linguagens. Estes exemplos fazem parte de um vídeo requisitado na cadeira de Introdução ao Processamento Paralelo e Distribuído, ministrada pelo professor Gerson.
 
+## Estrutura do Repositório
 
-- **Cargo.toml**: Arquivo de configuração do projeto Cargo.
-- **src/main.rs**: O arquivo principal do projeto (não utilizado neste exemplo específico).
-- **examples/**: Diretório contendo os exemplos de código para multithreading.
+- `examples/`: Contém os códigos sobre multithread em Rust.
+- `java-rust/`: Contém a comparação dos códigos Java e Rust para programação multithread.
 
-## Exemplos de Multithreading
+## Executando os Exemplos
 
-### 1. Criação de Threads (`create_threads.rs`)
+### Rust
 
-Este exemplo demonstra como criar e executar múltiplas threads em Rust.
+1. Navegue até o diretório `examples/`.
+2. Compile e execute o exemplo de multithread em Rust:
 
-**Código:**
-```rust
-use std::thread;
-
-fn main() {
-    let handle = thread::spawn(|| {
-        for i in 1..10 {
-            println!("Hello from the spawned thread! {}", i);
-        }
-    });
-
-    for i in 1..5 {
-        println!("Hello from the main thread! {}", i);
-    }
-
-    handle.join().unwrap();
-}
+```bash
+cd examples
+cargo run --example rust_multithread_example
 ```
 
-**Descrição:**
-- Cria uma thread que imprime mensagens de "Hello" com números.
-- A thread principal também imprime mensagens.
-- Thread Principal: A thread que executa o código na função main(). É a thread de início do programa.
-- Thread Secundária: A thread criada com thread::spawn para executar uma tarefa paralela.
-- Usa `handle.join()` para esperar que a thread secundária termine.
+### Java
 
-**Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-01-threads.html)
+1. Navegue até o diretório `java-rust/`.
+2. Compile e execute o exemplo de multithread em Java:
 
-### 2. Comunicação entre Threads usando Canais (`channels.rs`)
-
-Este exemplo mostra como usar canais para comunicar dados entre threads.
-
-**Código:**
-```rust
-use std::sync::mpsc;
-use std::thread;
-
-fn main() {
-    let (tx, rx) = mpsc::channel();
-
-    thread::spawn(move || {
-        let val = String::from("hi");
-        tx.send(val).unwrap();
-    });
-
-    let received = rx.recv().unwrap();
-    println!("Got: {}", received);
-}
+```bash
+cd java-rust
+javac MultithreadExample.java
+java MultithreadExample
 ```
 
-**Descrição:**
-- Cria um canal para comunicação entre threads.
-- A thread secundária envia a string "hi" através do canal.
-- A thread principal recebe e imprime a mensagem.
+## Conteúdo dos Diretórios
 
-**Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-02-message-passing.html)
+### examples/
 
-### 3. Compartilhamento de Dados com Arc e Mutex (`arc_mutex.rs`)
+Este diretório contém o exemplo de multithread em Rust. O código mostra como criar e gerenciar múltiplas threads, utilizando `Arc` e `Mutex` para compartilhar e sincronizar dados.
 
-Este exemplo demonstra como usar `Arc` e `Mutex` para compartilhar dados entre múltiplas threads de forma segura.
+### java-rust/
 
-**Código:**
-```rust
-use std::sync::{Arc, Mutex};
-use std::thread;
+Este diretório contém exemplos em Java e Rust para comparação. Inclui um README detalhado explicando as diferenças entre as abordagens de ambas as linguagens e comparando os tempos de execução.
 
-fn main() {
-    let counter = Arc::new(Mutex::new(0));
-    let mut handles = vec![];
+## Comparação de Desempenho
 
-    for _ in 0..10 {
-        let counter = Arc::clone(&counter);
-        let handle = thread::spawn(move || {
-            let mut num = counter.lock().unwrap();
-            *num += 1;
-        });
-        handles.push(handle);
-    }
+### Java
 
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    println!("Result: {}", *counter.lock().unwrap());
-}
+```java
+All tasks completed in: 520 ms.
 ```
 
-**Descrição:**
-- Cria um contador compartilhado usando `Arc` e `Mutex`.
-- 10 threads incrementam o contador.
-- Usa `Arc` para compartilhar o `Mutex` entre as threads.
-- Usa `Mutex` para garantir acesso exclusivo ao contador.
+### Rust
 
-**Fonte:** [doc.rust-lang.org ](https://doc.rust-lang.org/book/ch16-03-shared-state.html)
+```rust
+All tasks completed in: 1.001948862s
+```
 
-## Como Executar os Exemplos
+Embora o Rust tenha demorado mais tempo para concluir as tarefas neste exemplo específico, é importante considerar os fatores que influenciam o desempenho, como o overhead de gerenciamento de threads e sincronização de dados. Rust oferece um controle de baixo nível e otimizações que podem resultar em desempenho superior em outros cenários.
 
-Para compilar e executar cada exemplo, use o comando `cargo run --example` seguido pelo nome do arquivo do exemplo (sem a extensão `.rs`).
+## Conclusão
 
-**Exemplos:**
+A programação multithread pode ser complexa, mas Rust se destaca ao fornecer segurança de memória sem a necessidade de um garbage collector, resultando em código mais seguro e eficiente. Java, por outro lado, facilita a programação multithread com abstrações de alto nível como `ExecutorService`, mas depende do garbage collector para gerenciamento de memória.
 
-- **Criação de Threads:**
-  ```sh
-  cargo run --example create_threads
-  ```
+## Contato
 
-- **Comunicação entre Threads usando Canais:**
-  ```sh
-  cargo run --example channels
-  ```
+Para mais informações, sinta-se à vontade para entrar em contato:
 
-- **Compartilhamento de Dados com Arc e Mutex:**
-  ```sh
-  cargo run --example arc_mutex
-  ```
+- **Email**: seu_email@exemplo.com
+- **YouTube**: [Seu Canal no YouTube](https://www.youtube.com/seucanal)
 
-## Requisitos
-
-- Rust (instale-o a partir de [rust-lang.org](https://www.rust-lang.org/))
-- Cargo (gerenciador de pacotes do Rust)
-
-## Contribuições
-
-Sinta-se à vontade para enviar pull requests ou abrir issues para sugestões e melhorias.
-
-## Licença
-
-Este projeto é licenciado sob a [MIT License](LICENSE.md).
+Agradecemos por explorar este repositório e esperamos que os exemplos fornecidos sejam úteis para entender as diferenças entre Java e Rust na programação multithread.
