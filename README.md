@@ -1,4 +1,4 @@
-```markdown
+
 # Comparação de Programação Multithread: Java vs Rust
 
 Este repositório contém exemplos práticos de programação multithread em Java e Rust, com foco em comparar o desempenho e as abordagens de gerenciamento de threads e memória em ambas as linguagens. Estes exemplos fazem parte de um vídeo requisitado na cadeira de Introdução ao Processamento Paralelo e Distribuído, ministrada pelo professor Gerson.
