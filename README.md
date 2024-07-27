@@ -20,7 +20,7 @@ multithread_examples/
 
 - **Cargo.toml**: Arquivo de configuração do projeto Cargo.
 - **src/main.rs**: O arquivo principal do projeto (não utilizado neste exemplo específico).
-- **examples/**: Diretório contendo os exemplos de código para multithreading.
+- **examples/**: Diretório contendo os códigos sobre multithread em Rust, bem como a comparação dos códigos Java e Rust para programação multithread.
 
 
 
@@ -28,9 +28,6 @@ multithread_examples/
 
 Este repositório contém exemplos práticos de programação multithread em Java e Rust, com foco em comparar o desempenho e as abordagens de gerenciamento de threads e memória em ambas as linguagens. Estes exemplos fazem parte de um vídeo requisitado na cadeira de Introdução ao Processamento Paralelo e Distribuído, ministrada pelo professor Gerson.
 
-## Estrutura do Repositório
-
-- `examples/`: Contém os códigos sobre multithread em Rust, bem como a comparação dos códigos Java e Rust para programação multithread.
 
 ## Executando os Exemplos
 
@@ -55,16 +52,6 @@ javac MultithreadExample.java
 java MultithreadExample
 ```
 
-## Conteúdo dos Diretórios
-
-### examples/
-
-Este diretório contém o exemplo de multithread em Rust. O código mostra como criar e gerenciar múltiplas threads, utilizando `Arc` e `Mutex` para compartilhar e sincronizar dados.
-
-### java-rust/
-
-Este diretório contém exemplos em Java e Rust para comparação. Inclui um README detalhado explicando as diferenças entre as abordagens de ambas as linguagens e comparando os tempos de execução.
-
 ## Comparação de Desempenho
 
 ### Java
@@ -85,12 +72,14 @@ Embora o Rust tenha demorado mais tempo para concluir as tarefas neste exemplo e
 
 A programação multithread pode ser complexa, mas Rust se destaca ao fornecer segurança de memória sem a necessidade de um garbage collector, resultando em código mais seguro e eficiente. Java, por outro lado, facilita a programação multithread com abstrações de alto nível como `ExecutorService`, mas depende do garbage collector para gerenciamento de memória.
 
+https://medium.com/deno-the-complete-reference/url-shortener-service-benchmarking-spring-boot-virtual-threads-vs-rust-actix-d97ecf21c5df
 
 
-##  Recursos Multithreads em Rust
+
+#  Recursos Multithreads em Rust
 
 
-### 1. Criação de Threads (`create_threads.rs`)
+## 1. Criação de Threads (`create_threads.rs`)
 
 Este exemplo demonstra como criar e executar múltiplas threads em Rust.
 
