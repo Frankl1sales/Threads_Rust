@@ -43,7 +43,7 @@ cargo run --example rust_multithread_example
 
 ### Java
 
-1. Navegue até o diretório `java-rust/`.
+1. Navegue até o diretório `examples/`.
 2. Compile e execute o exemplo de multithread em Java:
 
 ```bash
