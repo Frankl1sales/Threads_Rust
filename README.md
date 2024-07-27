@@ -65,7 +65,8 @@ A programação multithread pode ser complexa, mas Rust se destaca ao fornecer s
 
 Para mais informações, sinta-se à vontade para entrar em contato:
 
-- **Email**: seu_email@exemplo.com
-- **YouTube**: [Seu Canal no YouTube](https://www.youtube.com/seucanal)
+<!--- **Email**: seu_email@exemplo.com
+- **YouTube**: [Seu Canal no YouTube](https://www.youtube.com/seucanal)-->
+
 
 Agradecemos por explorar este repositório e esperamos que os exemplos fornecidos sejam úteis para entender as diferenças entre Java e Rust na programação multithread.
