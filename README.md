@@ -71,6 +71,7 @@ Embora o Rust tenha demorado mais tempo para concluir as tarefas neste exemplo e
 ## Conclusão
 
 A programação multithread pode ser complexa, mas Rust se destaca ao fornecer segurança de memória sem a necessidade de um garbage collector, resultando em código mais seguro e eficiente. Java, por outro lado, facilita a programação multithread com abstrações de alto nível como `ExecutorService`, mas depende do garbage collector para gerenciamento de memória.
+
 **Fonte:** [medium](https://medium.com/deno-the-complete-reference/url-shortener-service-benchmarking-spring-boot-virtual-threads-vs-rust-actix-d97ecf21c5df])
 
 
