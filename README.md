@@ -202,17 +202,4 @@ Sinta-se à vontade para enviar pull requests ou abrir issues para sugestões e 
 
 ## Licença
 
-Este projeto é licenciado sob a [MIT License](LICENSE).
-
-```
-
-### Explicações Adicionais
-
-- **Introdução:** Apresenta o projeto e o que ele contém.
-- **Estrutura do Projeto:** Explica a organização dos arquivos no projeto.
-- **Exemplos de Multithreading:** Fornece uma descrição e o código para cada exemplo.
-- **Como Executar os Exemplos:** Instruções sobre como compilar e executar os exemplos.
-- **Requisitos:** Lista o que é necessário para executar o projeto.
-- **Contribuições e Licença:** Orientações sobre como contribuir e a licença do projeto.
-
-Se precisar ajustar ou adicionar algo mais, me avise!
+Este projeto é licenciado sob a [MIT License](LICENSE.md).
