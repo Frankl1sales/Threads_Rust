@@ -66,22 +66,23 @@ All tasks completed in: 520 ms.
 All tasks completed in: 1.001948862s
 ```
 
+
+### Fatores que Influenciam o Tempo de Execução
 Embora o Rust tenha demorado mais tempo para concluir as tarefas neste exemplo específico, é importante considerar os fatores que influenciam o desempenho, como o overhead de gerenciamento de threads e sincronização de dados. Rust oferece um controle de baixo nível e otimizações que podem resultar em desempenho superior em outros cenários.
 
-Fatores que Influenciam o Tempo de Execução
+Gerenciamento de Threads e Sistema Operacional:
+- Java: Utiliza abstrações de alto nível como ExecutorService, que pode aproveitar otimizações específicas do JVM (Java Virtual Machine) para gerenciar threads de maneira eficiente. A JVM também possui um sofisticado gerenciador de threads que pode melhorar a performance em certos cenários.
 
-### Gerenciamento de Threads e Sistema Operacional:
-Java: Utiliza abstrações de alto nível como ExecutorService, que pode aproveitar otimizações específicas do JVM (Java Virtual Machine) para gerenciar threads de maneira eficiente. A JVM também possui um sofisticado gerenciador de threads que pode melhorar a performance em certos cenários.
-
-Rust: Utiliza a biblioteca padrão para criar e gerenciar threads, o que pode não ter as mesmas otimizações de alto nível que a JVM fornece. O tempo de criação e gerenciamento de threads em Rust pode ser mais dependente do sistema operacional.
+- Rust: Utiliza a biblioteca padrão para criar e gerenciar threads, o que pode não ter as mesmas otimizações de alto nível que a JVM fornece. O tempo de criação e gerenciamento de threads em Rust pode ser mais dependente do sistema operacional.
 
 Garbage Collection vs. Sistema de Propriedade:
-        Java: O garbage collector pode ter um impacto no tempo de execução, mas no exemplo dado, o tempo de execução foi relativamente curto e a carga de memória não era alta o suficiente para desencadear uma coleta de lixo significativa. Isso significa que o overhead do garbage collector foi mínimo.
-        Rust: Utiliza um sistema de propriedade que evita a necessidade de garbage collection, mas isso também significa que a sincronização e o bloqueio de dados compartilhados (como o uso de Mutex) pode introduzir algum overhead adicional.
+- Java: O garbage collector pode ter um impacto no tempo de execução, mas no exemplo dado, o tempo de execução foi relativamente curto e a carga de memória não era alta o suficiente para desencadear uma coleta de lixo significativa. Isso significa que o overhead do garbage collector foi mínimo.
+
+- Rust: Utiliza um sistema de propriedade que evita a necessidade de garbage collection, mas isso também significa que a sincronização e o bloqueio de dados compartilhados (como o uso de Mutex) pode introduzir algum overhead adicional.
 
 Custo de Sincronização e Bloqueio:
-        Java: O ExecutorService gerencia a sincronização internamente, e as operações simples dentro do Runnable não envolvem bloqueios complexos, resultando em menor overhead.
-        Rust: O uso de Mutex para proteger a variável compartilhada pode introduzir latência adicional devido ao custo de bloqueio e desbloqueio, especialmente com muitas iterações.
+- Java: O ExecutorService gerencia a sincronização internamente, e as operações simples dentro do Runnable não envolvem bloqueios complexos, resultando em menor overhead.
+- Rust: O uso de Mutex para proteger a variável compartilhada pode introduzir latência adicional devido ao custo de bloqueio e desbloqueio, especialmente com muitas iterações.
 
 Ambiente de Execução e Compiladores:
         Java: O JIT (Just-In-Time) compiler da JVM pode otimizar o código em tempo de execução com base no perfil de execução, potencialmente resultando em um código mais eficiente após algumas iterações.
