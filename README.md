@@ -1,3 +1,28 @@
+# Proposta 
+Estes projeto tem como proposito demonstrar exemplos de recursos multi-threads em Rust para fins de explorar a robustez em relação gerenciamento de memória. Também é objetivo a comparação de algoritmos multi-threads em Java e Rust.
+
+## Estrutura do Projeto
+
+O projeto está estruturado da seguinte forma:
+
+```
+multithread_examples/
+├── Cargo.toml
+├── src/
+│   └── main.rs
+└── examples/
+    ├── create_threads.rs
+    ├── channels.rs
+    └── arc_mutex.rs
+    └── MultithreadExample.java
+    └── rust_multithread_example.rs
+
+
+- **Cargo.toml**: Arquivo de configuração do projeto Cargo.
+- **src/main.rs**: O arquivo principal do projeto (não utilizado neste exemplo específico).
+- **examples/**: Diretório contendo os exemplos de código para multithreading.
+```
+
 
 # Comparação de Programação Multithread: Java vs Rust
 
@@ -61,35 +86,9 @@ Embora o Rust tenha demorado mais tempo para concluir as tarefas neste exemplo e
 A programação multithread pode ser complexa, mas Rust se destaca ao fornecer segurança de memória sem a necessidade de um garbage collector, resultando em código mais seguro e eficiente. Java, por outro lado, facilita a programação multithread com abstrações de alto nível como `ExecutorService`, mas depende do garbage collector para gerenciamento de memória.
 
 
-### Recursos Multithreads em Rust
 
-```markdown
-# Exemplo de Programação Multithread em Rust
+##  Recursos Multithreads em Rust
 
-Estes contém exemplos de programação multithread em Rust, demonstrando como utilizar threads para realizar tarefas concorrentes e gerenciar dados compartilhados entre elas.
-
-## Estrutura do Projeto
-
-O projeto está estruturado da seguinte forma:
-
-```
-multithread_examples/
-├── Cargo.toml
-├── src/
-│   └── main.rs
-└── examples/
-    ├── create_threads.rs
-    ├── channels.rs
-    └── arc_mutex.rs
-    └── MultithreadExample.java
-    └── rust_multithread_example.rs
-```
-
-- **Cargo.toml**: Arquivo de configuração do projeto Cargo.
-- **src/main.rs**: O arquivo principal do projeto (não utilizado neste exemplo específico).
-- **examples/**: Diretório contendo os exemplos de código para multithreading.
-
-## Exemplos de Multithreading
 
 ### 1. Criação de Threads (`create_threads.rs`)
 
