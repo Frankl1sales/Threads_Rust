@@ -85,11 +85,11 @@ Custo de Sincronização e Bloqueio:
 - Rust: O uso de Mutex para proteger a variável compartilhada pode introduzir latência adicional devido ao custo de bloqueio e desbloqueio, especialmente com muitas iterações.
 
 Ambiente de Execução e Compiladores:
-        Java: O JIT (Just-In-Time) compiler da JVM pode otimizar o código em tempo de execução com base no perfil de execução, potencialmente resultando em um código mais eficiente após algumas iterações.
-        Rust: O código é compilado antecipadamente (AOT - Ahead-Of-Time), e enquanto o compilador LLVM de Rust realiza muitas otimizações, ele pode não ter o mesmo nível de adaptabilidade em tempo de execução que o JIT da JVM.
+- Java: O JIT (Just-In-Time) compiler da JVM pode otimizar o código em tempo de execução com base no perfil de execução, potencialmente resultando em um código mais eficiente após algumas iterações.
+- Rust: O código é compilado antecipadamente (AOT - Ahead-Of-Time), e enquanto o compilador LLVM de Rust realiza muitas otimizações, ele pode não ter o mesmo nível de adaptabilidade em tempo de execução que o JIT da JVM.
 
 Custo de I/O (Entrada/Saída):
-        Ambas as versões do código fazem muitas operações de I/O (impressão no console). Dependendo do ambiente e da implementação de I/O, isso pode afetar o desempenho. Operações de impressão no console podem ser mais lentas em alguns ambientes.
+- Ambas as versões do código fazem muitas operações de I/O (impressão no console). Dependendo do ambiente e da implementação de I/O, isso pode afetar o desempenho. Operações de impressão no console podem ser mais lentas em alguns ambientes.
 
 ## Conclusão
 
