@@ -1,6 +1,6 @@
 # Proposta 
 Estes projeto tem como proposito demonstrar exemplos de recursos multi-threads em Rust para fins de explorar a robustez em relação gerenciamento de memória. Também é objetivo a comparação de algoritmos multi-threads em Java e Rust.
-
+rust g
 ## Estrutura do Projeto
 
 O projeto está estruturado da seguinte forma:
